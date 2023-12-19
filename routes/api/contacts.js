@@ -51,7 +51,6 @@ router.post("/", async (req, res, next) => {
 router.delete("/:contactId", async (req, res, next) => {
   try {
     const { contactId } = req.params;
-    console.log("********  >>  : ", contactId);
     const result = await contacts.removeContact(contactId);
     if (!result) {
       throw HttpError(404, "Not found");

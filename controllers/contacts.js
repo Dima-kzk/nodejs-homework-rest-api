@@ -23,7 +23,6 @@ const addNew = async (req, res) => {
 
 const deletebyId = async (req, res) => {
   const { contactId } = req.params;
-  // const result = await Contact.findByIdAndRemove(contactId);
   const result = await Contact.findByIdAndDelete(contactId);
 
   if (!result) {
